@@ -1,0 +1,222 @@
+/* body{
+    background-image: url(../assets/img/blur.jpeg);
+} */
+.titulo{
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ciudadBuscador{
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(96, 184, 202);
+    color: rgb(0, 0, 0);
+    outline: none;
+    font-size: 20px;
+}
+.botonBuscar{
+    width: 25%;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(96, 184, 202);
+    margin-left: 5px;
+    transition: 1s ease-in-out;
+}
+.botonBuscar:hover{
+    background-color: rgb(76, 159, 176);
+    width: 35%;
+    height: 40px;
+}
+.botonOpcion{
+    width: 15%;
+    font-size: 60px;
+    color: #28569A;
+    border: none;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin-left: 5px;
+}
+.suchiapa{
+    display: flex;
+    padding-left: 100px;
+    justify-content: space-around;
+    align-items:flex-start;
+}
+.footerDerecho{
+    width: 100%;
+  display: flex;
+  justify-content: flex-end;  
+  flex-direction: row;
+  align-items: center;
+}
+.padre{
+    background-color: #D9D9D9;;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10px;
+}
+.primerHijo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.segundoHijo{
+    display: flex;
+    justify-content: space-evenly;
+}
+.tercerHijo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cuerpoPadre{
+    height: 580px;
+    background-image: url(../assets/img/blur.jpeg);
+    background-repeat: no-repeat;
+    background-size: 33.4% 1000px;
+    display: flex; 
+}
+.cuerpoIzquierdo{
+    background-color: rgba(0, 0, 0, 0.471);
+    width: 25%;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cuerpoIzquierdoDerecho{
+    background-color: rgba(0, 0, 0, 0.471);
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* css para el boton */
+@keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+    }
+  }
+.boton-corazon {
+    background-image: url(../assets/img/corazon.png);
+    background-size: 50px 40px;
+    background-repeat: no-repeat;
+    width: 7%;
+    height: 43px;
+    background-color: white;
+    border: none;
+    animation: scaleAnimation 2s infinite alternate;
+}
+/* fin del css para el boton  */
+
+
+/* css para ventana emergente simulasion  */
+.ventana-emergente {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .ventana-emergente > div {
+    animation-name: Animation;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count:initial;
+    position: fixed;
+    top: 19%;
+    left: 75%;
+    width: 20%;
+    height: 72%;
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes Animation {
+    0% {
+      transform: translateX(100px); /* Posición inicial, sin desplazamiento horizontal */
+    }
+    100% {
+      transform: translateX(0); /* Desplazamiento de 100px a la derecha */
+    }
+  }
+  
+  @keyframes ocultar {
+    0% {
+      transform: translateX(0); /* Posición actual, sin desplazamiento */
+    }
+    100% {
+      transform: translateX(100px); /* Desplazamiento hacia la derecha para ocultar */
+    }
+  }
+  .ventana-content {
+    animation-name: ocultar;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1; /* Reproducir solo una vez al cerrar */
+  }
+  
+  .alerta{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+  @keyframes aparecer {
+    0%{transform: scale(0.5);}
+   
+    100%{transform: scale(1.0);}
+  }
+  .alerta > div{
+    animation-name: aparecer;
+    animation-duration: 1s; 
+    animation-timing-function: ease; 
+    animation-iteration-count: 1; 
+    font-family:Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 29%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
